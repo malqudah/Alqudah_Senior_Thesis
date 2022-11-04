@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://registrarapps.princeton.edu/course-evaluation?terminfo=1204&courseinfo=001388 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+    (function() {
+      var container = document.querySelector('#_tcx-b7nw26errbc');
+      if (!container) {
+        return;
+      }
+
+      function addToContainer(url, text) {
+        const wrapper = document.createElement('div');
+        wrapper.setAttribute('data-tcx-url', url);
+        wrapper.innerText = text;
+        container.appendChild(wrapper);
+      }
+
+      const fetch = window.fetch
+      window.fetch = function() {
+        return Promise.resolve(fetch.apply(window, arguments))
+            .then(async response => {
+              if (response.ok) {
+                try {
+                  const clone = response.clone();
+                  const json = await clone.json();
+                  addToContainer(clone.url, JSON.stringify(json));
+                } catch (err) {}
+              }
+              return response;
+            });
+      };
+
+      var XHR = XMLHttpRequest.prototype;
+      var send = XHR.send;
+      var open = XHR.open;
+      XHR.open = function(method, url) {
+        this.url = url;
+        return open.apply(this, arguments);
+      };
+      XHR.send = function() {
+        this.addEventListener('load', function() {
+          try {
+            const response = this.response;
+            if (response && response.length) {
+              const firstChar = response[0];
+              if (firstChar === '[' || firstChar === '{') {
+                addToContainer(this.url, response);
+              }
+            }
+          } catch (err) {
+            // No-op.
+          }
+        });
+        return send.apply(this, arguments);
+      };
+    })();
+  </script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Course Evaluation Results</title>
+
+                        <link rel="stylesheet" href="./ECO300 FEMALE_files/global.2cfc16a7.css">
+        
+    <link rel="stylesheet" href="./ECO300 FEMALE_files/course_evaluation.f33f175c.css">
+                    </head>
+    <body>
+                    <header class="container">
+                <div class="header-container container">
+                    <div class="princeton-branding">
+                        <div class="container">
+                            <a href="http://www.princeton.edu/" class="pu-logo" title="Princeton University">
+                                <img src="./ECO300 FEMALE_files/pu-logo.svg" alt="Princeton University">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="site-branding">
+                        <div class="container">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="site-info">
+                                    <div class="site-name">
+                                        <a href="https://registrarapps.princeton.edu/" title="Home" rel="home">Office of the Registrar</a>
+                                    </div>
+                                </div>
+                                                                    <div class="site-logout">
+                                        <a href="https://registrarapps.princeton.edu/logout" title="Logout">Logout</a>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        
+                <div class="flash-messages container">
+                    </div>
+
+            <div class="main container">
+        <div class="d-flex justify-content-center"><h1>Course Evaluation Results</h1></div>
+
+        <div class="search mb-3 pt-3 no-gutters d-flex justify-content-center">
+            <form name="form" method="post">
+            
+            <div class="row">
+                <div class="mr-2 pl-3">
+                                                            <div><button type="submit" id="form_send" name="form[send]">Search Results</button></div>
+                </div>
+                <div>
+                                                            <div><button type="submit" id="form_reset" name="form[reset]" class="reset">New Search</button></div>
+                </div>
+            </div>
+            <input type="hidden" id="form__token" name="form[_token]" value="K1gRpu9M4rfy1NF7Ta--vimSWZkHHTGX2R0I_8a2vnw"></form>
+        </div>
+                    <div class="data-bar-chart" data-bar-chart="[{&quot;key&quot;:&quot;Quality of Classes&quot;,&quot;value&quot;:&quot;3.97&quot;},{&quot;key&quot;:&quot;Quality of Course&quot;,&quot;value&quot;:&quot;3.9&quot;},{&quot;key&quot;:&quot;Quality of Lectures&quot;,&quot;value&quot;:&quot;3.98&quot;},{&quot;key&quot;:&quot;Quality of Readings&quot;,&quot;value&quot;:&quot;3.73&quot;},{&quot;key&quot;:&quot;Quality of Written Assignments&quot;,&quot;value&quot;:&quot;3.87&quot;},{&quot;key&quot;:&quot;Recommend to Other Students&quot;,&quot;value&quot;:&quot;4.08&quot;}]"></div>
+            <div class="data-line-chart" data-line-chart="[{&quot;key&quot;:&quot;19-20 Fall&quot;,&quot;value&quot;:&quot;3.44&quot;},{&quot;key&quot;:&quot;19-20 Spr&quot;,&quot;value&quot;:&quot;3.9&quot;},{&quot;key&quot;:&quot;20-21 Fall&quot;,&quot;value&quot;:&quot;3.76&quot;},{&quot;key&quot;:&quot;20-21 Spr&quot;,&quot;value&quot;:&quot;3.38&quot;},{&quot;key&quot;:&quot;21-22 Fall&quot;,&quot;value&quot;:&quot;3.56&quot;},{&quot;key&quot;:&quot;21-22 Spr&quot;,&quot;value&quot;:&quot;3.66&quot;}]"></div>
+
+            <div class="evaluation-results">
+                <div class="terms-list row no-gutters">
+                                            <div class="tabs col text-center pt-2 pb-2">
+                            <a href="https://registrarapps.princeton.edu/course-evaluation?terminfo=1202&amp;courseinfo=001388" class="term-link ">
+                                2019-2020 Fall
+                            </a>
+                        </div>
+                                            <div class="tabs col text-center pt-2 pb-2">
+                            <a href="https://registrarapps.princeton.edu/course-evaluation?terminfo=1204&amp;courseinfo=001388" class="term-link active">
+                                2019-2020 Spring
+                            </a>
+                        </div>
+                                            <div class="tabs col text-center pt-2 pb-2">
+                            <a href="https://registrarapps.princeton.edu/course-evaluation?terminfo=1212&amp;courseinfo=001388" class="term-link ">
+                                2020-2021 Fall
+                            </a>
+                        </div>
+                                            <div class="tabs col text-center pt-2 pb-2">
+                            <a href="https://registrarapps.princeton.edu/course-evaluation?terminfo=1214&amp;courseinfo=001388" class="term-link ">
+                                2020-2021 Spring
+                            </a>
+                        </div>
+                                            <div class="tabs col text-center pt-2 pb-2">
+                            <a href="https://registrarapps.princeton.edu/course-evaluation?terminfo=1222&amp;courseinfo=001388" class="term-link ">
+                                2021-2022 Fall
+                            </a>
+                        </div>
+                                            <div class="tabs col text-center pt-2 pb-2">
+                            <a href="https://registrarapps.princeton.edu/course-evaluation?terminfo=1224&amp;courseinfo=001388" class="term-link ">
+                                2021-2022 Spring
+                            </a>
+                        </div>
+                                    </div>
+                <div class="course mt-4">
+                                            <div class="border border-dark bar-chart p-2">
+                            <div class="course-info">
+                                <div class="d-flex justify-content-center">
+                                    <h2 class="course-name">ECO 300 Microeconomic Theory</h2>
+                                </div>
+                                                                    <div class="d-flex justify-content-center">
+                                        <ul class="instructors-list list-unstyled">
+                                                                                            <li class="instructor">
+                                                    <a href="https://registrarapps.princeton.edu/course-evaluation/instructor?eid=410087955&amp;term=1204&amp;cid=001388">Andrea Wilson</a>
+                                                </li>
+                                                                                    </ul>
+                                    </div>
+                                                            </div>
+                            <div class="bar-chart-title d-flex justify-content-center">
+                                <h3>2019-2020 Spring Course Evaluation Results</h3>
+                            </div>
+                            <div id="bar-chart" class="chart d-flex justify-content-center" aria-hidden="true"><svg width="800" height="370"><g class="grid grid--x" transform="translate(320,0)" fill="none" font-size="10" font-family="sans-serif" text-anchor="end"><path class="domain" stroke="currentColor" d="M800,10.5H0.5V340.5H800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></path><g class="tick" opacity="1" transform="translate(0,46.09375)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(0,97.65625)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(0,149.21875)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(0,200.78125000000003)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(0,252.34375000000003)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(0,303.90625000000006)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g></g><g class="grid grid--y" transform="translate(0,340)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle"><path class="domain" stroke="currentColor" d="M320.5,-370V0.5H795.5V-370" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></path><g class="tick" opacity="1" transform="translate(320.5,0)"><line stroke="currentColor" y2="-370" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(368,0)"><line stroke="currentColor" y2="-370" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(415.5,0)"><line stroke="currentColor" y2="-370" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(463,0)"><line stroke="currentColor" y2="-370" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(510.5,0)"><line stroke="currentColor" y2="-370" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(558,0)"><line stroke="currentColor" y2="-370" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(605.5,0)"><line stroke="currentColor" y2="-370" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(653,0)"><line stroke="currentColor" y2="-370" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(700.5,0)"><line stroke="currentColor" y2="-370" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(748,0)"><line stroke="currentColor" y2="-370" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(795.5,0)"><line stroke="currentColor" y2="-370" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g></g><g class="axis axis--x" transform="translate(0,340)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle" style="font: 14px sans-serif;"><path class="domain" stroke="currentColor" d="M320.5,6V0.5H795.5V6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></path><g class="tick" opacity="1" transform="translate(320.5,0)"><line stroke="currentColor" y2="6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="9" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">0</text></g><g class="tick" opacity="1" transform="translate(415.5,0)"><line stroke="currentColor" y2="6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="9" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">1</text></g><g class="tick" opacity="1" transform="translate(510.5,0)"><line stroke="currentColor" y2="6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="9" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">2</text></g><g class="tick" opacity="1" transform="translate(605.5,0)"><line stroke="currentColor" y2="6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="9" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">3</text></g><g class="tick" opacity="1" transform="translate(700.5,0)"><line stroke="currentColor" y2="6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="9" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">4</text></g><g class="tick" opacity="1" transform="translate(795.5,0)"><line stroke="currentColor" y2="6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="9" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">5</text></g></g><g class="axis axis--y" transform="translate(320,0)" fill="none" font-size="10" font-family="sans-serif" text-anchor="end" style="font: 14px sans-serif;"><g class="tick" opacity="1" transform="translate(0,46.09375)"><line stroke="currentColor" x2="-6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-9" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">Quality of Classes</text></g><g class="tick" opacity="1" transform="translate(0,97.65625)"><line stroke="currentColor" x2="-6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-9" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">Quality of Course</text></g><g class="tick" opacity="1" transform="translate(0,149.21875)"><line stroke="currentColor" x2="-6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-9" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">Quality of Lectures</text></g><g class="tick" opacity="1" transform="translate(0,200.78125000000003)"><line stroke="currentColor" x2="-6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-9" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">Quality of Readings</text></g><g class="tick" opacity="1" transform="translate(0,252.34375000000003)"><line stroke="currentColor" x2="-6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-9" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">Quality of Written Assignments</text></g><g class="tick" opacity="1" transform="translate(0,303.90625000000006)"><line stroke="currentColor" x2="-6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-9" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">Recommend to Other Students</text></g></g><g fill="steelblue" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#386890;"><rect x="320" y="30.625" height="30.937500000000004" width="377.15"></rect><rect x="320" y="82.1875" height="30.937500000000004" width="370.5"></rect><rect x="320" y="133.75" height="30.937500000000004" width="378.1"></rect><rect x="320" y="185.31250000000003" height="30.937500000000004" width="354.35"></rect><rect x="320" y="236.87500000000003" height="30.937500000000004" width="367.6500000000001"></rect><rect x="320" y="288.43750000000006" height="30.937500000000004" width="387.6"></rect></g><g fill="black" text-anchor="end" style="font: 14px sans-serif; --darkreader-inline-fill:#000000;" data-darkreader-inline-fill=""><text y="46.09375" dy="0.35em" x="693.15" opacity="100">3.97</text><text y="97.65625" dy="0.35em" x="686.5" opacity="100">3.90</text><text y="149.21875" dy="0.35em" x="694.1" opacity="100">3.98</text><text y="200.78125000000003" dy="0.35em" x="670.35" opacity="100">3.73</text><text y="252.34375000000003" dy="0.35em" x="683.6500000000001" opacity="100">3.87</text><text y="303.90625000000006" dy="0.35em" x="703.6" opacity="100">4.08</text></g></svg></div>
+                            <table class="sr-only sr-only-focusable">
+                                <caption>Course Evaluation Results for ECO 300 Microeconomic Theory 2019-2020 Spring</caption>
+                                <tbody><tr>
+                                                                            <th>Quality of Classes</th>
+                                                                            <th>Quality of Course</th>
+                                                                            <th>Quality of Lectures</th>
+                                                                            <th>Quality of Readings</th>
+                                                                            <th>Quality of Written Assignments</th>
+                                                                            <th>Recommend to Other Students</th>
+                                                                    </tr>
+                                <tr>
+                                                                            <td>3.97</td>
+                                                                            <td>3.9</td>
+                                                                            <td>3.98</td>
+                                                                            <td>3.73</td>
+                                                                            <td>3.87</td>
+                                                                            <td>4.08</td>
+                                                                    </tr>
+                            </tbody></table>
+                        </div>
+                    
+                                            <div class="line-chart border border-dark mt-3 p-2">
+                            <div class="line-chart-title d-flex justify-content-center">
+                                <h3>Term Comparison: Results for Quality of Course</h3>
+                            </div>
+                            <div id="line-chart" class="d-flex justify-content-center chart" aria-hidden="true"><svg width="800" height="300"><g class="grid grid--x" transform="translate(320,0)" fill="none" font-size="10" font-family="sans-serif" text-anchor="end"><path class="domain" stroke="currentColor" d="M800,10.5H0.5V270.5H800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></path><g class="tick" opacity="1" transform="translate(0,10.5)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(0,36.49999999999999)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(0,62.499999999999986)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(0,88.50000000000001)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(0,114.5)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(0,140.5)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(0,166.5)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(0,192.5)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(0,218.5)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(0,244.5)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(0,270.5)"><line stroke="currentColor" x2="800" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-3" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g></g><g class="grid grid--y" transform="translate(0,270)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle"><path class="domain" stroke="currentColor" d="M320.5,-300V0.5H795.5V-300" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></path><g class="tick" opacity="1" transform="translate(371.953125,0)"><line stroke="currentColor" y2="-300" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(446.171875,0)"><line stroke="currentColor" y2="-300" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(520.390625,0)"><line stroke="currentColor" y2="-300" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(594.609375,0)"><line stroke="currentColor" y2="-300" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(668.828125,0)"><line stroke="currentColor" y2="-300" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g><g class="tick" opacity="1" transform="translate(743.046875,0)"><line stroke="currentColor" y2="-300" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="3" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></text></g></g><g class="axis axis--x" transform="translate(0,270)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle" style="font: 14px sans-serif;"><g class="tick" opacity="1" transform="translate(371.953125,0)"><line stroke="currentColor" y2="6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="9" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">19-20 Fall</text></g><g class="tick" opacity="1" transform="translate(446.171875,0)"><line stroke="currentColor" y2="6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="9" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">19-20 Spr</text></g><g class="tick" opacity="1" transform="translate(520.390625,0)"><line stroke="currentColor" y2="6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="9" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">20-21 Fall</text></g><g class="tick" opacity="1" transform="translate(594.609375,0)"><line stroke="currentColor" y2="6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="9" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">20-21 Spr</text></g><g class="tick" opacity="1" transform="translate(668.828125,0)"><line stroke="currentColor" y2="6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="9" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">21-22 Fall</text></g><g class="tick" opacity="1" transform="translate(743.046875,0)"><line stroke="currentColor" y2="6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" y="9" dy="0.71em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">21-22 Spr</text></g></g><g class="axis axis--y" transform="translate(320,0)" fill="none" font-size="10" font-family="sans-serif" text-anchor="end" style="font: 14px sans-serif;"><path class="domain" stroke="currentColor" d="M-6,10.5H0.5V270.5H-6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></path><g class="tick" opacity="1" transform="translate(0,10.5)"><line stroke="currentColor" x2="-6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-9" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">5</text></g><g class="tick" opacity="1" transform="translate(0,62.499999999999986)"><line stroke="currentColor" x2="-6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-9" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">4</text></g><g class="tick" opacity="1" transform="translate(0,114.5)"><line stroke="currentColor" x2="-6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-9" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">3</text></g><g class="tick" opacity="1" transform="translate(0,166.5)"><line stroke="currentColor" x2="-6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-9" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">2</text></g><g class="tick" opacity="1" transform="translate(0,218.5)"><line stroke="currentColor" x2="-6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-9" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">1</text></g><g class="tick" opacity="1" transform="translate(0,270.5)"><line stroke="currentColor" x2="-6" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;"></line><text fill="currentColor" x="-9" dy="0.32em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">0</text></g></g><g fill="steelblue" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#386890;"><path class="line" d="M371.953125,91.12L446.171875,67.19999999999999L520.390625,74.47999999999999L594.609375,94.24000000000002L668.828125,84.88000000000001L743.046875,79.68"></path></g><circle class="dot" cx="371.953125" cy="91.12" r="3" opacity="100"></circle><circle class="dot" cx="446.171875" cy="67.19999999999999" r="3" opacity="100"></circle><circle class="dot" cx="520.390625" cy="74.47999999999999" r="3" opacity="100"></circle><circle class="dot" cx="594.609375" cy="94.24000000000002" r="3" opacity="100"></circle><circle class="dot" cx="668.828125" cy="84.88000000000001" r="3" opacity="100"></circle><circle class="dot" cx="743.046875" cy="79.68" r="3" opacity="100"></circle><g fill="black" text-anchor="end" style="font: 14px sans-serif; --darkreader-inline-fill:#000000;" data-darkreader-inline-fill=""><text y="103.12" dy="0.35em" x="371.953125" opacity="100">3.44</text><text y="79.19999999999999" dy="0.35em" x="446.171875" opacity="100">3.90</text><text y="86.47999999999999" dy="0.35em" x="520.390625" opacity="100">3.76</text><text y="106.24000000000002" dy="0.35em" x="594.609375" opacity="100">3.38</text><text y="96.88000000000001" dy="0.35em" x="668.828125" opacity="100">3.56</text><text y="91.68" dy="0.35em" x="743.046875" opacity="100">3.66</text></g></svg></div>
+                            <table class="sr-only sr-only-focusable">
+                                <caption>Term Comparison: Results for Quality of Course ECO 300 Microeconomic Theory</caption>
+                                <tbody><tr>
+                                                                            <th>19-20 Fall</th>
+                                                                            <th>19-20 Spr</th>
+                                                                            <th>20-21 Fall</th>
+                                                                            <th>20-21 Spr</th>
+                                                                            <th>21-22 Fall</th>
+                                                                            <th>21-22 Spr</th>
+                                                                    </tr>
+                                <tr>
+                                                                            <td>3.44</td>
+                                                                            <td>3.9</td>
+                                                                            <td>3.76</td>
+                                                                            <td>3.38</td>
+                                                                            <td>3.56</td>
+                                                                            <td>3.66</td>
+                                                                    </tr>
+                            </tbody></table>
+                        </div>
+                    
+                </div>
+
+                    <div class="comments-section mt-4">
+                                                    <div class="disclaimer border border-dark p-2">
+                                <strong>Please Note</strong>
+                                Princeton University does not consider student comment information provided to be official University course evaluation data; it does not take that information into consideration in approving courses for permanent status; and it does not take the information into consideration in making tenure or promotion decisions.
+                            </div>
+                            <div class="comments-title border border-dark p-2 bg-secondary text-light">
+                                <h2>Student Comments</h2><br>What advice would you give to another student considering taking this course?
+                            </div>
+                                                            <div class="comment border border-dark p-2">Much better taught than ECO101</div>
+                                                            <div class="comment border border-dark p-2">It isn't the best class you'll take at Princeton. But for people who have to take this class, I strongly recommend taking it with Professor Wilson. She explains things very clearly and her lecture notes are easy to follow. Yes, she's a bit boring, but to be fair, I don't really think anyone can make this material interesting. This class has been rated pretty poorly, but I think it's not so much her fault as it is the content itself being dry. Professor Wilson is also a nice person and she's willing to help you out if you reach out. </div>
+                                                            <div class="comment border border-dark p-2">Take it with Professor Wilson! Both her and the preceptor (Lee) were extremely willing to help and provided consistently high level of instruction throughout the semester.</div>
+                                                            <div class="comment border border-dark p-2">Probably the easiest of the WWS economics core reqs with Wilson teaching. But just like all other econ classes, the content is mind-numbingly boring. </div>
+                                                            <div class="comment border border-dark p-2">An extension of ECO100, with a little more game theory and other concepts. Not math heavy, easier than ECO310. </div>
+                                                            <div class="comment border border-dark p-2">Although the course taught you the basic microeconomic material you need to know, the material, in my opinion, is very dry and boring. It feels like you're just somehow learning to apply calculus to word problems that do not represent the real world. Although the material was well taught as in you learned the stuff you need to learn how to do, the lack of connection to the real world was really disappointing for me as this is an economics class. Although this is a pretty easy class, I would only take it if you need to. There are much more intellectually stimulating classes out there. </div>
+                                                            <div class="comment border border-dark p-2">This class was fairly taught, the professor was nice and the problem sets overlapped with the material in class and precepts. I feel the class got better as it went online as you could speed up the lectures to get the lecture done in under 1 hour with no effect on the learning</div>
+                                                            <div class="comment border border-dark p-2">If Professor Wilson is teaching, don't miss the opportunity! She teaches wonderfully and her dog, Mavi, is always a treat. Course material can be challenging at times but the resources are there to clarify doubts you have. Just stay on top of the lectures and problem set material (and review sheets!) and you'll be fine. Really enjoyed myself :)</div>
+                                                            <div class="comment border border-dark p-2">Take it</div>
+                                                            <div class="comment border border-dark p-2">Be sure to keep up and read the notes thoroughly in order to do the problem sets.</div>
+                                                            <div class="comment border border-dark p-2">Take with Prof Wilson! She's tough but a very good prof</div>
+                                                            <div class="comment border border-dark p-2">Ask questions in precept and make sure you understand the problem sets well before going into the exam.</div>
+                                                            <div class="comment border border-dark p-2">Go to lectures and you will be just fine. </div>
+                                                            <div class="comment border border-dark p-2">Use the lecture notes during psets and pay attention in lecture to get down the material. Work with classmates on psets. </div>
+                                                            <div class="comment border border-dark p-2">For an ECO core class, not bad at all! Professor Wilson is so kind and genuinely cares about her students, and she is super knowledgeable about what she teaches. Lecture can get a little slow/repetitive at times, but it's actually really helpful for reviewing material and really making sure you understand what's going on. Would strongly recommend printing and annotating the lecture slides, and form pset groups to work through the bi-weekly psets. </div>
+                                                            <div class="comment border border-dark p-2">I would take this course over ECO310 if Andrea Wilson is teaching it. She is a good professor and generously curves the class while also being easy to reach. </div>
+                                                            <div class="comment border border-dark p-2">Took it for the woody woo econ requirement and have no real complaints. It sounds like there are no great options for the rec but the class was manageable and well-taught so I would recommend. Exams were hard but fair and as a non math person, I was able to get the pretty simple math by studying a decent amount.</div>
+                                                            <div class="comment border border-dark p-2">I took this after skipping eco100 (I had an AP Micro 5) and didn't find it to be excessively difficult. It's very manageable if you pay attention in lecture/read the lecture slides to make sure you understand the content. Other than that, it's a pretty light workload. </div>
+                                                            <div class="comment border border-dark p-2">The course if not very difficult so long as you actually go to lecture and follow along</div>
+                                                            <div class="comment border border-dark p-2">Definitely take this class if you want to fulfill WWS requirement. It's very easy to understand, not hard on the math, and Prof Wilson is extremely kind and understanding and does her best to make sure you are understand all the material! It's a great class.</div>
+                                                            <div class="comment border border-dark p-2">This course by Andrea has become a much better departmental than in the past. She is always available to answer questions and lectures are generally straightforward. However, more practice tests and more tests/projects to gauge the course material would have been helpful.</div>
+                                                            <div class="comment border border-dark p-2">This class is a departmental, so most people are taking it because they have to. Professor Wilson is a good professor and she is very willing to work with you. The midterm was much harder than the final, and there were more resources to prepare for the final. The psets were relevant to the lectuers and while the exams were harder, they were just applications of the material, so using psets and practice exams really helps.  Lectures were overall fine, but you do have to keep reviewing the material because there are a lot of small specifics that are really important for understanding in the course.</div>
+                                                            <div class="comment border border-dark p-2">If you have to take this course, it isn't the end of the world. You'll do just fine as long as you use your resources - Dr. Wilson, the preceptors, etc.</div>
+                                                            <div class="comment border border-dark p-2">I really enjoyed the material in this course and Prof. Wilson is a great lecturer! The course load was relatively light and the content is very well taught.</div>
+                                                            <div class="comment border border-dark p-2">go to lecture and review your notes. ask for help etc etc</div>
+                                                            <div class="comment border border-dark p-2">It is very repetitive of Intro to Micro, and honestly easier.</div>
+                                                            <div class="comment border border-dark p-2">Pretty straightforward course. Going to lecture not necessary; slides are self-explanatory and sufficient for psets.</div>
+                                                            <div class="comment border border-dark p-2">Go to precept, study the lecture slides, and practice as much as you can. There are challenging parts, but overall it is a very fair course. </div>
+                                                            <div class="comment border border-dark p-2">Get a group of people who are willing and able to collaborate. This course can be done without help from friends, but more minds on the psets and exam prep have made my experience much smoother.</div>
+                                                            <div class="comment border border-dark p-2">Work hard! The psets really reflect the topics that will on the final and midterm</div>
+                                                            <div class="comment border border-dark p-2">If you're taking this course it's probably because you have to for ECO or WWS. Prof Wilson is a better lecturer than many of the Econ faculty. Dan is also a great preceptor! There were only 5 psets which was nice, but exam Qs were often unrelated to the psets and much harder. I PDFed, but I'd say it's pretty hard to get an A-range if you're not a particularily quantitative person like myself. Make sure you have a strong micro and math foundation before walking in. Also, make sure to have a study buddy! I didn't, which made it tougher. At the end of the day, its standard micro which can be pretty dry.</div>
+                                                            <div class="comment border border-dark p-2">Only take it if you have to.</div>
+                                                            <div class="comment border border-dark p-2">I took this as a departmental prerequisite. I found the class moderately engaging and not overly difficult. I wouldn't take unless it was a departmental. </div>
+                                                            <div class="comment border border-dark p-2">ONLY take this class with Wilson and DO NOT TAKE THE WWS ECO CLASS</div>
+                                                            <div class="comment border border-dark p-2">If you're looking for a WWS econ core requirement, take this course! The workload is super manageable ? there are only five problem sets, plus a midterm and final. It's not the most fascinating content, but the psets were pretty straightforward and the final curve for the class was really generous. Sometimes the administrative part of the course felt a tad chaotic, but overall, Professor Wilson was incredibly accessible and had the students' best interests in mind. Dan is also an amazing preceptor and his office hours were super helpful! If you put in the work you'll definitely be fine. </div>
+                                                            <div class="comment border border-dark p-2">For me, this course was better than WWS 300. I shopped both ECO 300 and WWS 300 and though WWS 300 was supposed to be easier, from what I remember ECO 300 was taught in such a way that it ended up being easier. (I took it with Professor Andrea Wilson.)</div>
+                                                                        </div>
+
+            </div>
+            </div>
+
+                    <footer role="contentinfo" class="footer" id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3>Office of the Registrar</h3>
+                            <div class="clearfix">
+                                <p>Princeton University<br>
+                                    330 Alexander Street, 4th floor<br>
+                                    Princeton, NJ 08540</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h2>Contact</h2>
+                            <div class="clearfix">
+                                <p>Phone: (609) 258-3361<br>
+                                    Fax: (609) 258-6328<br>
+                                    Email: <a href="mailto:registrar@princeton.edu" class="mailto">
+                                        registrar@princeton.edu
+                                        <span class="mailto" aria-label="(link sends email)"></span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h2>Office Hours</h2>
+                            <div class="clearfix">
+                                <p>Academic Year:<br>8:45 a.m. - 5:00 p.m.</p>
+                                <p>Summer:<br>8:30 a.m. - 4:30 p.m.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subfooter">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="http://odoc.princeton.edu/" class="odoc-logo" title="Office of the Dean of the College">
+                                    <img src="./ECO300 FEMALE_files/logo-odoc.svg" alt="Office of the Dean of the College">
+                                </a>
+                            </div>
+
+                            <div class="col-md-6 text-sm-left text-md-right copyright">
+                                <a href="http://www.princeton.edu/" class="pu-logo" title="Princeton University"><img src="./ECO300 FEMALE_files/pu-logo-stacked.svg" alt="Princeton University">
+                                </a>
+                                <p class="copyright-text">
+                                    © 2022 The Trustees of Princeton University
+                                </p>
+                                <div class="subfooter-links">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="https://accessibility.princeton.edu/resources/accessibility-help" target="_blank" class="ext">Accessibility<span class="ext" aria-label="(link is external)"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        
+                        <script src="./ECO300 FEMALE_files/runtime.ed3c6480.js.download"></script><script src="./ECO300 FEMALE_files/1.d8b1eb99.js.download"></script><script src="./ECO300 FEMALE_files/global.9f6a6fe4.js.download"></script>
+        
+            <script src="./ECO300 FEMALE_files/0.d5c91b62.js.download"></script><script src="./ECO300 FEMALE_files/course_evaluation.a0ec2b1e.js.download"></script>
+                
+
+<tc-workshop class="dock-bottom maximized dead">
+      <div class="inner">
+
+        <!-- MODALS -->
+        <div class="_tc-modal-container"></div>
+
+        <!-- SIZE QUEEN -->
+        <div class="size-queen too-small-window-message">This window is too small. Try making it bigger to use Table Capture.</div>
+        <div class="size-queen too-small-frame-message">This frame is too small. <a>Click here</a> to maximize it to continue using Table Capture.</div>
+
+        <div class="_tc-header">
+          <div class="_tc-brand">
+            <div class="_tc-logo-wrapper">
+              <img src="chrome-extension://iebpjdmgckacbodjpijphcplhebcmeop/images/icon.png">
+            </div>
+            <div class="frame-title">
+              <span class="frame-title-context"></span>
+              <div class="lds-heart tc-hidden">
+                <div></div>
+              </div>
+            </div>
+          </div>
+          <div class="_tc-actions">
+            <div class="pro-cta not-tc-pro tc-hidden">
+              <span>Upgrade to <span class="_tc-strong">Pro</span></span>
+            </div>
+          <div class="_tc-action _tc-action-bugreport"><span>?</span></div><div class="_tc-action _tc-action-clear"><span>⌫</span></div><div class="_tc-action _tc-action-topdock"><span>↑</span></div><div class="_tc-action _tc-action-bottomdock"><span>↓</span></div><div class="_tc-action _tc-action-glimpse"><span>◯</span></div><div class="_tc-action _tc-action-minimize"><span>_</span></div><div class="_tc-action _tc-action-maximize"><span>☐</span></div><div class="_tc-action _tc-action-fullscreen"><span>⇱</span></div><div class="_tc-action _tc-action-exitfullscreen"><span>⇲</span></div><div class="_tc-action _tc-action-remove"><span>×</span></div></div>
+        </div>
+        <div class="_tc-content">
+      <div class="tc-col _tc-left">
+        <div class="arb-nav">
+          <div class="_tc-heading">Before you capture:</div>
+          <p class="readable">
+            Use the buttons below to find the page element that wraps all the repeating elements of your table or list-like content.
+          </p>
+          <div class="nav-actions">
+            <tcbutton class="btn-select-parent">Select parent element</tcbutton>
+            <tcbutton class="btn-select-child">Select child element</tcbutton>
+          </div>
+        </div>
+        <div class="_tc-settings">
+          <div class="_tc-heading">
+            Options
+            <span class="inline-action edit-settings">✎</span>
+          </div>
+          <div class="settings-summary"><span class="_tc-tag">Ignore image + icon attributes</span><span class="_tc-tag">Delete empty rows</span><span class="_tc-tag">Ignore hidden elements</span></div>
+          <p class="disclaimer settings-refresh tc-hidden">Refresh the page and relaunch the workshop to reflect any options changes.</p>
+        </div>
+        <div class="robot-wrapper tc-hidden">
+          <div class="_tc-heading">
+            Paged &amp; Dynamic Tables
+            <span class="inline-action robot-refetch-data">⟳</span>
+            <span class="inline-action emoji set-robot-capture-config">🛠</span>
+          </div>
+        </div>
+        <div class="paged-tables-upgrade-required tc-hidden">
+          <div class="_tc-heading">Paged &amp; Dynamic Tables</div>
+          <label class="_tc-switch _tc-switch-disabled">
+            <input type="checkbox" disabled="true">
+            <span class="tc-slider"></span>
+          </label>
+          <p class="readable">
+            <a class="pro-cta loud-cta">Try Table Capture Pro</a> to be able to capture multi-page tables <a href="https://photos.app.goo.gl/EjjKPnNRStfZZj8TA" target="_blank">(demo)</a> and tables
+            whose content changes dynamically <a href="https://photos.app.goo.gl/hYLsamqXR8ZQjBvj8" target="_blank">(demo)</a>. 
+            <span class="cloud-cta-wrapper support-cloud-only">Also, <a class="cloud-cta loud-cta"> try Table Capture Cloud (Beta)</a> for a bunch of next-level features.</span>
+          </p>
+        </div>
+        <div class="table-paging">
+          <div class="_tc-heading">
+            Paged tables
+            <span class="inline-action refetch-data">⟳</span>
+          </div>
+          <p class="readable">
+            If your table only shows a portion of its content on this page and needs to reload a new page to show more,
+            enable paged capture. <a href="https://photos.app.goo.gl/EjjKPnNRStfZZj8TA" target="_blank">(See a demo)</a>
+          </p>
+          <label class="_tc-switch paged-recording-switch">
+            <input type="checkbox" class="paged-recording-checkbox">
+            <span class="tc-slider"></span>
+          </label>
+          <p class="readable paging-info">
+            <strong>Next: Click whatever link or button will go to the next page.</strong> The extension will remember which table
+            you're interested in. As long as it can find your table, it'll keep capturing its data as you go through pages.
+          </p>
+          <div class="sub-actions">
+            <tctoggbutton class="_tc-toggle-btn btn-auto-page disable-not-pro">Toggle auto-paging</tctoggbutton>
+            <tcbutton class="btn-workshop-default tc-hidden btn-update-pager-selector _tc-disabled">🛠</tcbutton>
+          </div>
+          <p class="readable paging-data-disclaimer">
+            You have been capturing paged content. Turning paging off now will clear your previously captured data.
+          </p>
+        </div>
+        <div class="table-recording">
+          <div class="_tc-heading">
+            Dynamic tables
+            <span class="inline-action emoji set-dynamic-capture-config">🛠</span>
+          </div>
+          <p class="readable">
+            Some tables grow and shrink as you scroll or allow you to load new data without the entire site reloading. Turn on dynamic table capture to detect and capture
+            all the rows that are ever displayed. <a href="https://photos.app.goo.gl/hYLsamqXR8ZQjBvj8" target="_blank">(See a demo)</a>
+          </p>
+          <p class="readable arb-nav-only">
+            Turn on dynamic table capture only after you've selected the correct page element that
+            wraps all the repeating elements of your table or list-like content.
+          </p>
+          <label class="_tc-switch recording-switch">
+            <input type="checkbox" class="recording-checkbox">
+            <span class="tc-slider"></span>
+          </label>
+          <div class="sub-actions">
+            <tctoggbutton class="_tc-toggle-btn btn-auto-scroll disable-not-pro">Toggle auto-scrolling</tctoggbutton>
+            <tctoggbutton class="_tc-toggle-btn btn-auto-dynpage disable-not-pro">Toggle auto-paging</tctoggbutton>
+            <tcbutton class="btn-workshop-default tc-hidden btn-update-dyn-pager-selector _tc-disabled">🛠</tcbutton>
+            <tctoggbutton class="_tc-toggle-btn btn-sync-to-sheets disable-not-pro support-cloud-only">
+              <img src="chrome-extension://iebpjdmgckacbodjpijphcplhebcmeop/images/icon.cloud.128.png">
+              <span class="_tc-button-text">Google Sheets Sync</span>
+            </tctoggbutton>
+          </div>
+          <p class="readable dyn-paging-info">
+            <strong>Next: Click whatever link or button will go to the next page.</strong> The extension will then try to click that button
+            continuously until you turn off auto-paging.
+          </p>
+        </div>
+        <div class="_tc-json-responses tc-hidden">
+          <div class="_tc-heading">Data Requests Containing: <span class="needle"></span></div>
+          <p class="readable">Select a request below to view its data.</p>
+          <div class="_tc-response-list"></div>
+        </div>
+        <div class="_tc-recipe-controls tc-hidden">
+          <div class="_tc-heading">Recipe Controls</div>
+          <div class="sub-actions">
+            <tcbutton class="btn-clip-recipe">Clip Recipe</tcbutton>
+            <tcbutton class="btn-recipe-clip-data">View Clip Data</tcbutton>
+          </div>
+          <p class="readable">
+            When you clip a recipe, Table Capture adds the data to one aggregate collection of data per recipe
+            that you can later export as you so choose.
+          </p>
+          <p class="readable _tc-text-well">
+            <strong>FYI.</strong> Recipe clipping is a new feature. We welcome your feedback!
+          </p>
+        </div>
+      </div>
+      <div class="tc-col _tc-right">
+        <div class="_tc-heading">
+          Preview Data · <span class="_tc-size">Rows: 38, Columns: 2</span>
+          <span class="_tc-data-action _tc-clip tc-hidden">Clip</span>
+          <span class="_tc-data-action _tc-columnify">Break columns</span>
+        </div>
+        <table class="tc-ignore"><tbody><tr><td style="pointer-events: auto;"><div class="_tc-cell-inner">Please Note</div></td><td style="pointer-events: auto;"><div class="_tc-cell-inner">Princeton University does not consider student comment information provided to be official University course evaluation data; it does not take that information into consideration in approving courses for permanent status; and it does not take the information into consideration in making tenure or promotion decisions.</div></td><td></td></tr><tr><td><div class="_tc-cell-inner">Student Comments</div></td><td><div class="_tc-cell-inner"></div></td><td><div class="_tc-cell-inner">What advice would you give to another student considering taking this course?</div></td></tr><tr><td><div class="_tc-cell-inner">Much better taught than ECO101</div></td><td></td><td></td></tr><tr><td class="_tc-ellipsis-cell" colspan="3"><div class="_tc-cell-inner">...</div></td></tr><tr><td><div class="_tc-cell-inner">For me, this course was better than WWS 300. I shopped both ECO 300 and WWS 300 and though WWS 300 was supposed to be easier, from what I remember ECO 300 was taught in such a way that it ended up being easier. (I took it with Professor Andrea Wilson.)</div></td><td></td><td></td></tr></tbody></table>
+        <div class="_tc-actions"><button class="btn-copy false"><img src="chrome-extension://iebpjdmgckacbodjpijphcplhebcmeop/images/icon.clipboard.add.png"></button><button class="btn-sheets false"><img src="chrome-extension://iebpjdmgckacbodjpijphcplhebcmeop/images/icon.sheets.png"></button><button class="btn-edit false"><img src="chrome-extension://iebpjdmgckacbodjpijphcplhebcmeop/images/icon.clipboard.edit.png"></button><button class="btn-csv false"><img src="chrome-extension://iebpjdmgckacbodjpijphcplhebcmeop/images/icon.csv.b.png"></button><button class="btn-excel false"><img src="chrome-extension://iebpjdmgckacbodjpijphcplhebcmeop/images/icon.excel.svg"></button><button class="btn-o365 btn-no-frame"><img src="chrome-extension://iebpjdmgckacbodjpijphcplhebcmeop/images/icon.o365.png"></button><button class="btn-screenshot btn-no-frame"><img src="chrome-extension://iebpjdmgckacbodjpijphcplhebcmeop/images/icon.screenshot.big.png"></button><button class="btn-markdown btn-no-frame"><img src="chrome-extension://iebpjdmgckacbodjpijphcplhebcmeop/images/icon.markdown.png"></button><button class="btn-publish btn-no-frame"><img src="chrome-extension://iebpjdmgckacbodjpijphcplhebcmeop/images/icon.publish.png"></button></div>
+      </div>
+    </div>
+      </div>
+    </tc-workshop></body></html>
